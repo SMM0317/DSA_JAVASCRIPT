@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert Array</title>
+    <script>
+        // let data = [10, 25, 8, 40, 50]
+        // let newEl = 77;
+        // let Position = 2;
+        // console.warn(data)
+        // for (let i = data.length - 1; i >= 0; i--) {
+        //     if (i >= Position) {
+        //         data[i + 1] = data[i];
+        //         if (i == Position) {
+        //             data[i] = newEl;
+        //         }
+        //     }
+        // }
+        // console.warn(data)
+        function insertEl() {
+            let data = [10, 25, 8, 40, 50];
+            let newEl = document.getElementById("newEl").value
+            newEl = parseInt(newEl);
+            let Position = document.getElementById("Position").value
+            console.warn(data)
+
+            for (let i = data.length - 1; i >= 0; i--) {
+                if (i >= Position) {
+                    data[i + 1] = data[i];
+                    if (i == Position) {
+                        data[i] = newEl;
+                    }
+                }
+            }
+            console.warn(data)
+
+        }
+    </script>
+</head>
+
+<body>
+    <input type="text" id="Position" placeholder="Enter Position">
+    <input type="text" id="newEl" placeholder="Enter new element">
+    <button onclick="insertEl()"> Insert </button>
+</body>
+
+</html>
+
+<!-- 
+    Using default functions of js
+    >> let items = [20,40,10]
+undefined
+>> item.splice(2, 0, 2002)
+VM214:1 Uncaught ReferenceError: item is not defined
+    at <anonymous>:1:1
+
+>> items.splice(2, 0, 2002)
+
+>> items
+(4) [20, 40, 2002, 10] -->
