@@ -1,0 +1,64 @@
+<!-- Shortcut for reverse array 
+shortcut for merege array -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merge Array </title>
+    <script>
+        let data = [10, 20, 30];
+        let data2 = [15, 25, 35];
+        let data3 = [];
+
+        for (i = 0; i < data.length; i++) {
+            // data3.push(data+data)
+            data3[i] = data[i]
+        }
+        for (i = 0; i < data.length; i++) {
+            // console.warn(data.length + i)
+            data3[data.length + i] = data2[i]
+        }
+
+        console.warn(data3)
+    </script>
+</head>
+
+<body>
+    <p>
+    <h4>
+        Reverse array using js default functions
+    </h4>
+    let dummy = [10,20,40,100]
+    undefined
+    <br>
+    let dummy = [10,20,40,100];
+    undefined
+    <br>
+
+    dummy.reverse()
+    (4) [100, 40, 20, 10]
+    <br>
+    <br>
+
+    <h4>
+        Merged array using ecma script spread operator/js default functions
+    </h4>
+    let dummy2 = [200, 300, 400];
+    undefined
+    <br>
+
+    let dummy3 = [...dummy,...dummy2]
+    undefined
+    <br>
+
+    dummy3
+    (7) [100, 40, 20, 10, 200, 300, 400]
+
+    </p>
+</body>
+
+</html>
