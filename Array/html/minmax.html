@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>minmax</title>
+    <script>
+        let data = [9, 45, 2, 8, 45, 23, 7, 78, 0, 11, 41, 77];
+        //         for(let i=0; i<data.length; i++){
+        // // console.log(i) // 
+        // document.write ( `Array ${i} is ${data[i]} <br>`)
+        //         }
+
+        //accesing a element from array
+        // let x = 7;
+        // document.write(data[x]);
+
+        //accessing by input enterd value 
+        function findMinMax(data) {
+            // if (data == null || data.length == 0) return
+            console.log("check", data)
+
+            let min = data[0];
+            let max = data[0];
+            for (let i = 1; i < data.length; i++) {
+                if (data[i] < min) {
+                    min = data[i];
+                }
+                if (data[i] > max) {
+                    max = data[i];
+                }else{
+                    alert("murkha")
+
+                }
+                alert(data[i])
+                console.log("check", max)
+                alert(min)
+
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    <!-- <input type="text" id="element" />
+    <button onclick="getElement()"> get element</button> -->
+</body>
+
+</html>
